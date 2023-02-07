@@ -1,0 +1,113 @@
+.menu-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 60%;
+    font-family: 'Saira SemiCondensed', sans-serif;
+    column-gap: 5%;
+}
+
+.restaurant-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 47.5%;
+    height: 100%;
+    border: 1px solid #707070;
+    background: #D4A666;
+    border-radius: 20px;
+    margin-top: 5%;
+    font-family: 'Saira SemiCondensed', sans-serif;
+    font-size: 30px;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 47.5%;
+    height: 100%;
+    margin-top: 5%;
+    font-family: 'Saira SemiCondensed', sans-serif;
+}
+
+.menu-link {
+    padding: 1em;
+    margin: 1em;
+    width: 30%;
+    border: 1px solid #5c401a;
+    border-radius: 0.1rem;
+    box-sizing: border-box;
+    color: #000000;
+    font-family: 'Saira SemiCondensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #A87D40;
+}
+
+.book-link {
+    padding: 1em;
+    margin: 1em;
+    width: 30%;
+    border: 1px solid #5c401a;
+    border-radius: 0.1rem;
+    box-sizing: border-box;
+    color: #000000;
+    font-family: 'Saira SemiCondensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #A87D40;
+}
+
+.account-option-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 40%;
+    font-family: 'Saira SemiCondensed', sans-serif;
+    column-gap: 5%;
+
+}
+.sign-in-link {
+    width: 47.5%;
+    height: 30%;
+
+    background: #D4A666;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5c401a;
+    border-radius: 0.1rem;
+    font-family: 'Saira SemiCondensed', sans-serif;
+}
+
+.sign-up-link {
+    width: 47.5%;
+    height: 30%;
+    background: #D4A666;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5c401a;
+    border-radius: 0.1rem;
+    font-family: 'Saira SemiCondensed', sans-serif;
+}

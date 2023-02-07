@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.restaurant-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 15%;
+    border: 1px solid #707070;
+    background: #D4A666;
+    border-radius: 20px;
+    margin-top: 5%;
+    font-family: 'Saira SemiCondensed', sans-serif;
+    font-size: 30px;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    background: #ffddad;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    font-family: 'Saira SemiCondensed', sans-serif;
+}
+
+form.login_panel, form.register_panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #707070;
+    border-radius: 33px;
+    background-color: #a87d40;
+    height: fit-content;
+}
+
+.restriction {
+    font-family: 'Saira SemiCondensed', sans-serif;
+    font-size: 10px;
+}
+
+.create-an-account {
+    font-family: 'Saira SemiCondensed', sans-serif;
+    font-size: 30px;
+    color: #d4a666;
+}
+input,
+textarea {
+    background-color: #d4a666;
+    /*border: none;*/
+    /*border-bottom: 1px solid gray;*/
+    padding: 1em;
+    margin: 1em;
+    width: 30%;
+    border: solid 0.2rem #5c401a;
+    border-radius
+    :
+            0.1rem;
+    box-sizing
+    :
+            border-box;
+    color
+    :
+            #000000;
+    font-family: 'Saira SemiCondensed', sans-serif;
+    /*font-size*/
+    /*:*/
+    /*        3rem;*/
+    /*line-height*/
+    /*:*/
+    /*        1.2575;*/
+    text-align
+    :
+            center;
+    white-space
+    :
+            nowrap;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+.submit-button {
+    background-color: #d4a666;
+    /*border: none;*/
+    /*border-bottom: 1px solid gray;*/
+    padding: 1em;
+    margin: 1em;
+    border: solid 0.25rem #5c401a;
+    border-radius:0.25rem;
+    box-sizing: border-box;
+    color: #000000;
+    font-family: 'Saira SemiCondensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.error {
+    font-family: 'Saira SemiCondensed', sans-serif;
+    font-size: 10px;
+    color: #d4a666;
+}
