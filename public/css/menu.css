@@ -1,0 +1,68 @@
+.header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 30%;
+}
+
+.back, .cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d4a666;
+    padding: 1em;
+    margin: 1em;
+    box-sizing: border-box;
+    color: #000000;
+    font-family: 'Saira SemiCondensed', sans-serif;
+    flex-direction: column;
+    width: 10%;
+}
+
+
+
+.context-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 70%;
+    flex-wrap: wrap;
+}
+
+.context-wrapper>* {
+    flex: 1 1 30%;
+}
+
+.peperoni {
+    /*display: flex;*/
+    justify-content: center;
+    text-align: center;
+}
+
+.product-description {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*width: 30%;*/
+    font-family: 'Saira SemiCondensed', sans-serif;
+    /*color: #d4a666;*/
+    border: 1px solid #707070;
+    /*border-radius: 20px;*/
+    width: 50%;
+    background-color: #a87d40;
+    /*height: fit-content;*/
+}
+img {
+    width: 60%;
+    height: 60%;
+}
+
+.submit-order-button {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}

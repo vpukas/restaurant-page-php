@@ -85,7 +85,7 @@ a{
     column-gap: 5%;
 
 }
-.sign-in-link {
+.sign-in-link, .sign-up-link {
     width: 47.5%;
     height: 30%;
 
@@ -99,15 +99,3 @@ a{
     font-family: 'Saira SemiCondensed', sans-serif;
 }
 
-.sign-up-link {
-    width: 47.5%;
-    height: 30%;
-    background: #D4A666;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #5c401a;
-    border-radius: 0.1rem;
-    font-family: 'Saira SemiCondensed', sans-serif;
-}

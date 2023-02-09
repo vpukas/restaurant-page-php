@@ -1,11 +1,18 @@
 <?php
 
 require 'src/controllers/DefaultController.php';
+require 'src/controllers/SecurityController.php';
+require 'src/controllers/RegistrationController.php';
+require 'src/controllers/ProductController.php';
 class Routing {
     public static $routes;
 
-    public static function get($url, $controller) {
-        self::$routes[$url] = $controller;
+    public static function get($url, $view) {
+        self::$routes[$url] = $view;
+    }
+
+    public static function post($uri, $view) {
+        self::$routes[$uri] = $view;
     }
 
     public static function run($url) {
