@@ -30,4 +30,38 @@ class CartRepository extends Repository
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_COLUMN);
     }
+
+    public function addCartItem($idProduct, $idUser) {
+        $stmt = $this->database->connect()->prepare('
+        INSERT INTO public.cart_items(id_user, id_product, create_date, is_active)
+        VALUES (?,?,?,?)');
+        $stmt->execute([
+            $idUser,
+            $idProduct,
+            date('Y-m-d H:i:s'),
+            true,
+        ]);
+    }
+
+    public function deleteCartItem($idCart) {
+        $stmt = $this->database->connect()->prepare('
+        DELETE FROM cart_items where id_cart = :id_cart');
+        $stmt->bindParam('id_cart', $idCart, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+
+    public function addOrder($idUser, $totalCost, $address, $notes) {
+        $stmt = $this->database->connect()->prepare('
+        INSERT INTO public.orders(address, total_cost, notes, id_user, order_time)
+        VALUES (?,?,?,?,?)');
+        $stmt->execute([$address, $totalCost, $notes, $idUser, date('Y-m-d H:i:s')]);
+        $this->setCartItemsInactive($idUser);
+    }
+
+    public function setCartItemsInactive($idUser) {
+        $stmt=$this->database->connect()->prepare('
+        UPDATE cart_items SET is_active = false WHERE id_user = :id_user');
+        $stmt->bindParam('id_user', $idUser, PDO::PARAM_INT);
+        $stmt->execute();
+    }
 }

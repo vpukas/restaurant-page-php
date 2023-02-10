@@ -110,17 +110,17 @@ class CartItemDTO
     }
 
     /**
-     * @return int
+     * @return float
      */
-    public function getProductPrice(): int
+    public function getProductPrice(): float
     {
         return $this->productPrice;
     }
 
     /**
-     * @param int $productPrice
+     * @param float $productPrice
      */
-    public function setProductPrice(int $productPrice): void
+    public function setProductPrice(float $productPrice): void
     {
         $this->productPrice = $productPrice;
     }

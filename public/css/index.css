@@ -85,7 +85,7 @@ a{
     column-gap: 5%;
 
 }
-.sign-in-link {
+.sign-in-link, .sign-up-link {
     width: 47.5%;
     height: 30%;
     background: #D4A666;

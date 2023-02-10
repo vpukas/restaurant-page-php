@@ -16,15 +16,31 @@ class CartController extends AppController
     }
     public function cart()
     {
-        $url = "http://$_SERVER[HTTP_HOST]";
-        if(isset($_COOKIE["id_user"])) {
+        $this->checkIfLoggedIn();
+        if(!$this->isPost()) {
             $idUser = $_COOKIE['id_user'];
             $this->render('cart', ['items' => $this->cartRepository->getCartItemsForCurrentUser($idUser),
-                                            'totalPrice' => $this->cartRepository->getTotalCartCostByUserId($idUser)]);
+                'totalPrice' => $this->cartRepository->getTotalCartCostByUserId($idUser)]);
         }
-        else {
-            header("Location: {$url}/login");
+
+        $idCart = $_POST['id_cart'];
+        $this->cartRepository->deleteCartItem($idCart);
+        @header("Location: {$this->url}/cart");
+    }
+
+    public function order() {
+        $this->checkIfLoggedIn();
+        $idUser = $_COOKIE['id_user'];
+        if(!$this->isPost()) {
+            $this->render('cart', ['items' => $this->cartRepository->getCartItemsForCurrentUser($idUser),
+                'totalPrice' => $this->cartRepository->getTotalCartCostByUserId($idUser)]);
         }
+        $address = $_POST['address'];
+        $notes = $_POST['notes'];
+        $cost = $_POST['total_cost'];
+        $this->cartRepository->addOrder($idUser, $cost, $address, $notes);
+        header("Location: {$this->url}/cart");
+        return;
     }
 
 

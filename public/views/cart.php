@@ -12,14 +12,17 @@
 <body>
 <div class="content">
     <div class="header-wrapper">
-        <div class="back">back</div>
+        <div class="back"><a href="menu">BACK</a></div>
     </div>
     <div class="context-wrapper">
         <div class="order-wrapper">
-            <form class="order-form-content">
-                <input type="text" name="address" placeholder="Wrocławska 5" />
+            <form method="POST" action="order" class="order-form-content">
+                <input type="text" name="address" placeholder="your address"/>
                 <input type="text" name="notes" placeholder="notes">
-                <button class="submit-button" type="submit">place an order</button>
+                <input type="hidden" name="total_cost" value=<?php if (isset($totalPrice)) {
+                    echo $totalPrice;
+                } ?> >
+                <button class="submit-button" type="submit">PLACE AN ORDER</button>
             </form>
             <div class="total-cost-container">
                 <p>Total cost: <?php if (isset($totalPrice)) {
@@ -30,17 +33,15 @@
         <div class="cart-container">
             <?php if (isset($items)) {
                 foreach ($items as $item): ?>
-                <form class="item-form-content" action="/cart" method="POST">
+                <form class="item-form-content" action="cart" method="POST">
                     <p><?php echo $item->getProductName()?></p>
                     <p><?php echo $item->getProductPrice()?></p>
-                    <input type="hidden" name="idCart" value=<?php echo $item->getIdCart()?>>
-                    <button class="submit-order-button">delete</button>
+                    <input type="hidden" name="id_cart" value=<?php echo $item->getIdCart()?>>
+                    <button class="submit-order-button">DELETE</button>
                 </form>
-                <!--      <p th:if="${cart.totalCost} =='0.0'">Your cart is empty!</p>-->
                 <?php endforeach;
             } ?>
         </div>
-
     </div>
 </div>
 </body>

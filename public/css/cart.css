@@ -1,25 +1,9 @@
-/*.order-form-content {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    width: 47.5%;*/
-/*    height: 100%;*/
-/*    border: 1px solid #707070;*/
-/*    background: #D4A666;*/
-/*    border-radius: 20px;*/
-/*    margin-top: 5%;*/
-/*    font-family: 'Saira SemiCondensed', sans-serif;*/
-/*    font-size: 30px;*/
-/*}*/
-
 .context-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
     height: 70%;
-    /*flex-wrap: wrap;*/
 }
 
 .order-wrapper {
@@ -82,8 +66,6 @@
 
 .submit-order-button {
     background-color: #d4a666;
-    /*border: none;*/
-    /*border-bottom: 1px solid gray;*/
     padding: 1em;
     margin: 1em;
     border: solid 0.25rem #5c401a;
@@ -108,8 +90,6 @@
 
 .total-cost-container {
     background-color: #d4a666;
-    /*border: none;*/
-    /*border-bottom: 1px solid gray;*/
     padding: 1em;
     margin-top: 1em;
     box-sizing: border-box;

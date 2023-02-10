@@ -35,4 +35,11 @@ class AppController {
 
         print $output;
     }
+
+    protected function checkIfLoggedIn() {
+        if(!isset($_COOKIE["id_user"]) || $_COOKIE['id_role'] == 2) {
+            header("Location: {$this->url}/login");
+            return;
+        }
+    }
 }
