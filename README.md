@@ -1,4 +1,4 @@
-# MyFit
+# Restauracja
 
 ## Table of Contents
 * [General Info](#general-information)
