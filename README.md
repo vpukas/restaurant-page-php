@@ -36,11 +36,11 @@ List the ready features here:
 - Guest accounts
 
 ## Screenshots
-![login]
-![registration]
-![index]
-![menu]
-![cart]
+![login](/public/img/login.png)
+![registration](/public/img/registration.png)
+![index](/public/img/index.png)
+![menu](/public/img/menu.png)
+![cart](/public/img/cart.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Usage
