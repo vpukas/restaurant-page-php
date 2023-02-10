@@ -1,7 +1,8 @@
 <?php
 require_once 'AppController.php';
 
-class DefaultController extends AppController {
+class DefaultController extends AppController
+{
 
     public function login() {
         $this->render('login');
@@ -9,5 +10,9 @@ class DefaultController extends AppController {
 
     public function index() {
         $this->render('index');
+    }
+
+    public function registration() {
+        $this->render('registration');
     }
 }
