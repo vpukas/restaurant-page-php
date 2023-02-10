@@ -3,10 +3,12 @@
 class AppController {
 
     private $request;
+    protected $url;
 
     public function __construct()
     {
         $this->request = $_SERVER['REQUEST_METHOD'];
+        $this->url ="http://$_SERVER[HTTP_HOST]";
     }
 
     protected function isGet(): bool

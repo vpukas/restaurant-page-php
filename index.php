@@ -13,5 +13,6 @@ Routing::post('registration', 'RegistrationController');
 Routing::post('guest', 'SecurityController');
 Routing::get('logout', 'SecurityController');
 Routing::get('menu', 'ProductController');
+Routing::get('cart', 'CartController');
 
 Routing::run($path);

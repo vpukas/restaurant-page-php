@@ -15,8 +15,15 @@ class ProductController extends AppController
     }
     public function menu()
     {
-        $this->render('menu', ['products' => $this->productRepository->getProducts()]);
+        if(!$this->isPost()) {
+            return $this->render('menu', ['products' => $this->productRepository->getProducts()]);
+        }
+        if(!isset($_COOKIE["id_user"]) || $_COOKIE['id_role'] == 2) {
+            header("Location: {$this->url}/login");
+            return;
+        }
     }
+
 
 
 }

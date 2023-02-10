@@ -4,6 +4,7 @@ require 'src/controllers/DefaultController.php';
 require 'src/controllers/SecurityController.php';
 require 'src/controllers/RegistrationController.php';
 require 'src/controllers/ProductController.php';
+require 'src/controllers/CartController.php';
 class Routing {
     public static $routes;
 

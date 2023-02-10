@@ -8,12 +8,12 @@ class Product
     private $img;
 
     /**
-     * @param $idProduct
+     * @param null $idProduct
      * @param $name
-     * @param $price
+     * @param float $price
      * @param $img
      */
-    public function __construct($idProduct = null, $name, $price, $img)
+    public function __construct($idProduct = null, $name, float $price, $img)
     {
         $this->idProduct = $idProduct;
         $this->name = $name;

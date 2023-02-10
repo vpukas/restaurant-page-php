@@ -7,18 +7,22 @@ class Cart
     private $idProduct;
     private $createDate;
 
+    private $isActive = true;
+
     /**
-     * @param $idCart
-     * @param $idUser
-     * @param $idProduct
+     * @param int $idCart
+     * @param int $idUser
+     * @param int $idProduct
      * @param $createDate
+     * @param bool $isActive
      */
-    public function __construct($idCart, $idUser, $idProduct, $createDate)
+    public function __construct(int $idCart, int $idUser, int $idProduct, $createDate, bool $isActive)
     {
         $this->idCart = $idCart;
         $this->idUser = $idUser;
         $this->idProduct = $idProduct;
         $this->createDate = $createDate;
+        $this->isActive = $isActive;
     }
 
     /**
@@ -83,6 +87,22 @@ class Cart
     public function setCreateDate($createDate): void
     {
         $this->createDate = $createDate;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isActive(): bool
+    {
+        return $this->isActive;
+    }
+
+    /**
+     * @param bool $isActive
+     */
+    public function setIsActive(bool $isActive): void
+    {
+        $this->isActive = $isActive;
     }
 
 
