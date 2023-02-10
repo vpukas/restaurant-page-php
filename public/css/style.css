@@ -74,6 +74,7 @@ form.login_panel, form.register_panel {
     font-size: 30px;
     color: #d4a666;
 }
+
 input,
 textarea {
     background-color: #d4a666;
@@ -88,6 +89,7 @@ textarea {
     text-align: center;
     white-space: nowrap;
 }
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: black;
     opacity: 1; /* Firefox */
