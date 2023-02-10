@@ -18,15 +18,12 @@ class ProductController extends AppController
     }
     public function menu()
     {
-        if(!isset($_COOKIE["id_user"]) || $_COOKIE['id_role'] == 2) {
-            header("Location: {$this->url}/login");
-            return;
-        }
         if(!$this->isPost()) {
             return $this->render('menu', ['products' => $this->productRepository->getProducts()]);
         }
         $idProduct = $_POST['product_id'];
         $idUser = $_COOKIE["id_user"];
+        $this->checkIfLoggedIn();
         $this->cartRepository->addCartItem($idProduct, $idUser);
         header("Location: {$this->url}/cart");
         return;

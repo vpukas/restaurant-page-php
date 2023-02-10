@@ -19,12 +19,9 @@ class SecurityController extends AppController
 
     public function login()
     {
-        $url = "http://$_SERVER[HTTP_HOST]";
-        if(isset($_COOKIE["id_user"])) {
-            header("Location: {$url}/index");
-            return;
+        if(isset($_COOKIE['id_user'])) {
+            $this->logout();
         }
-
         if(!$this->isPost()) {
             return $this->render('login');
         }
@@ -51,8 +48,7 @@ class SecurityController extends AppController
 
         $this->setCookies('id_role', $user->getIdUser());
 
-        $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/index");
+        header("Location: {$this->url}/index");
     }
 
     public function logout()
