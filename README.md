@@ -20,7 +20,7 @@
 - CSS3
 - PostgreSQL - version 15.1
 - Docker - version 4.16.3
-- PHP - version 7.4.3h
+- PHP - version 7.4.3
 
 ## Features
 List the ready features here:
